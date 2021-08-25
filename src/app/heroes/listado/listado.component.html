@@ -1,0 +1,23 @@
+<p>Listado de Heroes</p>
+<!-- <div *ngIf="hBorrado !== '' "> // Otra manera de Hacer la negacion..-->
+<!-- <div *ngIf="hBorrado"> //Angular infiere que la condicion no se cumple si el resultado es vacio o '' o null -->
+<!-- 1-TPL : Podemos referenciar a una plantilla-ng en este caso a noBorrado -->
+<div *ngIf="hBorrado; else noBorrado">
+    <h3>Heroe Borrado: <small> {{hBorrado}} </small> </h3>
+</div>
+
+<!-- 2-TPL :Aqui hacemos el NG-TEMPLATE y le ponemos la refenrencia que quuerramos con #  -->
+
+<ng-template #noBorrado>
+    <h3>No se ha borrado nada. </h3>
+</ng-template>
+
+<br>
+
+<button (click)="borrarHeroe()">
+    Borrar Heroe
+</button>
+
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index">{{i+1}} - {{heroe}}</li>
+</ul>
