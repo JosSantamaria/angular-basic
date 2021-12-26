@@ -1,23 +1,22 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ContadorComponent } from './contador/contador/contador.component';
-import { HeroeComponent } from './heroes/heroe/heroe.component';
-import { ListadoComponent } from './heroes/listado/listado.component';
 
-//Aqui declaramos nuestrosnuevos componentes para que angular pueda reconocerlos.
-import { HeroesModule } from './heroes/heroe/heroes.module';
+import { HeroesModule } from './heroes/heroes.module';
 import { ContadorModule } from './contador/contador.module';
+import { DbzModule } from './dbz/dbz.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     HeroesModule,
-    ContadorModule
+    ContadorModule,
+    DbzModule
   ],
   providers: [],
   bootstrap: [AppComponent]
