@@ -8,7 +8,7 @@ import { DbzService } from '../services/dbz.service';
   templateUrl: './agregar.component.html'
 })
 export class AgregarComponent {
-
+//Entrada para la propiedad del componente hijo
   @Input() nuevo: Personaje = {
     nombre: '',
     poder: 0
